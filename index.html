@@ -257,6 +257,34 @@ small.sub { display: inline; }
 .banner { position: relative; margin-top: 44px; border-radius: 26px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 26px 28px; min-height: 150px; color: #2d1346; background: linear-gradient(100deg, #ee8fd8, #c58bf2 55%, #ffd66b); box-shadow: 0 12px 30px var(--shadow); }
 .banner h2 { margin: 0 0 6px; font-family: var(--font-display); font-weight: 400; font-size: clamp(1.4rem, 4.5vw, 2rem); line-height: 1.05; letter-spacing: 0.02em; text-transform: uppercase; color: #fff; text-shadow: 0 2px 0 rgba(80, 20, 100, 0.35); text-wrap: balance; }
 .banner p { margin: 0 0 14px; max-width: 36ch; font-weight: 500; }
+.banner p mark.hl { background: linear-gradient(180deg, #ffe14a, #ffa31f); color: #3a1500; padding: 1px 9px; border-radius: 8px; font-family: var(--font-display); font-weight: 400; letter-spacing: 0.03em; box-shadow: 0 2px 0 #c4690a; -webkit-box-decoration-break: clone; box-decoration-break: clone; white-space: nowrap; }
+.banner .eyebrow { display: inline-flex; align-items: center; gap: 6px; margin: 0 0 8px; padding: 4px 12px; border-radius: 999px; background: #2d1346; color: #ffe14a; font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.banner .cb { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin: 2px 0 6px; padding: 8px 20px 10px; border-radius: 18px; rotate: -2deg; background: linear-gradient(180deg, #ffe14a, #ffa31f); color: #3a1500; border: 3px solid #fff3b0; box-shadow: 0 6px 0 #c4690a, 0 12px 20px rgba(60, 10, 80, 0.3); }
+.banner .cb .upto { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: 0.06em; }
+.banner .cb .pct { font-family: var(--font-display); font-size: clamp(2.6rem, 9vw, 3.8rem); line-height: 0.95; letter-spacing: 0.01em; text-shadow: 0 2px 0 rgba(255, 255, 255, 0.55); }
+.banner .cb .cbw { font-family: var(--font-display); font-size: clamp(1.2rem, 4vw, 1.7rem); letter-spacing: 0.05em; }
+.banner .sub { color: #2d1346; opacity: 1; text-transform: none; margin: 0 0 14px; max-width: 34ch; font-weight: 600; font-size: 1.02rem; }
+.banner .bacts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.banner .bacts .offer { margin: 0; }
+@media (prefers-reduced-motion: no-preference) { .banner .cb { animation: cbpulse 2.4s ease-in-out infinite; } @keyframes cbpulse { 0%, 100% { scale: 1; } 50% { scale: 1.035; } } }
+/* offer poster */
+.banner.poster { color: #fff; background: radial-gradient(circle at 78% 30%, rgba(255, 138, 31, 0.28), transparent 45%), linear-gradient(110deg, #1d0838, #3d1478 60%, #5a1f9c); border: 3px solid rgba(177, 140, 255, 0.45); }
+.banner.poster .pk { margin: 0 0 4px; font-family: var(--font-display); font-size: clamp(0.95rem, 2.8vw, 1.25rem); letter-spacing: 0.08em; text-transform: uppercase; color: #ffd9a0; }
+.banner.poster .big { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: clamp(2.5rem, 11vw, 4.6rem); line-height: 0.95; letter-spacing: 0.01em; text-transform: uppercase; color: #ffc233; text-shadow: 0 4px 0 #b5510a, 0 8px 0 rgba(0, 0, 0, 0.3), 0 0 26px rgba(255, 176, 46, 0.45); }
+.banner.poster .big span { display: block; }
+.banner.poster .sub { margin: 10px 0 16px; max-width: 34ch; color: #efe3ff; font-weight: 600; font-size: 1.02rem; text-transform: none; }
+.banner.poster .bacts { gap: 16px; }
+.banner.poster .vlink { color: #e9d9ff; font-weight: 700; font-size: 0.95rem; text-decoration: underline; text-underline-offset: 4px; }
+.banner.poster .vlink:hover { color: #fff; }
+.banner.poster .pdeco { position: absolute; pointer-events: none; z-index: 0; }
+.banner.poster .pdeco.bt1 { width: 46px; left: 52%; top: 12%; fill: #b18cff; opacity: 0.8; }
+.banner.poster .pdeco.bt2 { width: 30px; left: 60%; top: 54%; fill: #b18cff; opacity: 0.6; }
+.banner.poster .pdeco.st { width: 14px; fill: #fff6b0; }
+.banner.poster .pdeco.st.a { left: 46%; top: 70%; } .banner.poster .pdeco.st.b { left: 66%; top: 18%; }
+.banner.poster > * { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: no-preference) { .banner.poster .pdeco.bt1 { animation: batHover 2.4s ease-in-out infinite alternate; } }
+@media (max-width: 560px) { .banner.poster .pk { font-size: 0.82rem; letter-spacing: 0.05em; } .banner.poster .pdeco.bt1, .banner.poster .pdeco.bt2 { display: none; } }
+
 .banner .go { display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 999px; padding: 9px 18px; background: #fff; color: #7b2aa8; font-weight: 700; box-shadow: 0 4px 10px rgba(80, 20, 100, 0.25); text-decoration: none; }
 .banner .scene { align-self: end; margin: 0 -10px -26px 0; display: flex; align-items: flex-end; }
 .banner .scene svg { display: block; height: 150px; width: auto; max-width: 100%; }
@@ -624,6 +652,22 @@ footer { margin-top: 28px; text-align: center; color: var(--ink-soft); font-size
 }
 @media (min-width: 701px) and (prefers-reduced-motion: no-preference) { .codes .gift { animation: giftBob2 2.6s ease-in-out infinite; } @keyframes giftBob2 { 0%, 100% { rotate: -3deg; margin-top: 0; } 50% { rotate: 3deg; margin-top: -8px; } } }
 
+.primerow { margin-top: 44px; }
+.primerow .candies { margin-top: 0; }
+.candy.prime { background: linear-gradient(160deg, var(--card), color-mix(in srgb, #38bdf8 18%, var(--card))); }
+.candy.gift { background: linear-gradient(160deg, var(--card), color-mix(in srgb, #ffb02e 20%, var(--card))); }
+.candy .codebtn2 { display: inline-block; margin-top: 10px; padding: 6px 20px; border-radius: 999px; font-family: var(--font-display); font-size: 0.95rem; letter-spacing: 0.04em; text-decoration: none; color: #3a1500; background: linear-gradient(180deg, #ffe14a, #ffa31f); border: 2px solid #fff3b0; box-shadow: 0 4px 0 #c4690a; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.candy .codebtn2:hover { transform: translateY(-2px); box-shadow: 0 6px 0 #c4690a; }
+.candy .codebtn2:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; }
+@media (min-width: 900px) {
+  .primerow .candies { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .primerow .candy { display: block; text-align: center; padding: 22px 16px 22px; min-height: 0; }
+  .primerow .candy .candy-svg { max-width: 240px; margin: 0 auto; }
+  .primerow .candy h3 { margin: 10px 0 4px; }
+  .primerow .candy .hint { margin-top: 10px; }
+}
+.candy.rew { background: linear-gradient(160deg, var(--card), color-mix(in srgb, #ff4fa0 16%, var(--card))); }
+
 .candies, .cats4, .treatnote { max-width: none; }
 @media (min-width: 701px) {
   .treats { margin-top: 44px; }
@@ -967,58 +1011,72 @@ footer { margin-top: 28px; text-align: center; color: var(--ink-soft); font-size
     </div>
   </section>
 
-  <section class="codes" id="codes" aria-labelledby="codesTitle">
-
-    <svg class="deco web" viewBox="0 0 100 100" aria-hidden="true"><path d="M0 0L100 0M0 0L0 100M0 0L82 82M0 0L100 42M0 0L42 100"/><path d="M22 0Q18 18 0 22M44 0Q38 38 0 44M68 0Q58 58 0 68M92 0Q78 78 0 92"/></svg>
-    <svg class="deco spider" viewBox="0 0 44 110" aria-hidden="true"><path d="M22 0V76" stroke="rgba(200,180,230,0.7)" stroke-width="1.5"/><g fill="#1a0b2b" stroke="#b18cff" stroke-width="1"><circle cx="22" cy="86" r="9"/><circle cx="22" cy="76" r="5.5"/></g><g stroke="#b18cff" stroke-width="1.6" fill="none" stroke-linecap="round"><path d="M14 82L4 76 2 88M14 88L5 96 7 104M30 82L40 76 42 88M30 88L39 96 37 104"/></g><circle cx="20" cy="75" r="1.3" fill="#ff4d4d"/><circle cx="24" cy="75" r="1.3" fill="#ff4d4d"/></svg>
-    <svg class="deco cbat b1" viewBox="0 0 100 55" aria-hidden="true"><use href="#bat"/></svg>
-    <svg class="deco cbat b2" viewBox="0 0 100 55" aria-hidden="true" style="transform:scaleX(-1)"><use href="#bat"/></svg>
-    <svg class="deco moon2" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#ffe14a"/><circle cx="26" cy="15" r="14" fill="var(--moon-cut, #2b1247)" opacity="0"/><circle cx="14" cy="14" r="3" fill="#ffd21f"/><circle cx="25" cy="25" r="4" fill="#ffd21f"/></svg>
-    <svg class="deco star s1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg><svg class="deco star s2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg><svg class="deco star s3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
-    <svg class="deco blackcat" viewBox="0 0 100 120" aria-hidden="true">
-      <path class="tail" d="M74 108C98 108 100 76 88 66" fill="none" stroke="#b18cff" stroke-width="12" stroke-linecap="round" opacity="0.7"/>
-      <path class="tail" d="M74 108C98 108 100 76 88 66" fill="none" stroke="#120a1c" stroke-width="9" stroke-linecap="round"/>
-      <g fill="#120a1c" stroke="#b18cff" stroke-width="1.6" stroke-linejoin="round">
-        <path d="M24 112C14 88 22 62 50 60 78 62 86 88 76 112Z"/>
-        <path d="M32 44L30 14 46 28ZM68 44L70 14 54 28Z"/>
-        <ellipse cx="50" cy="44" rx="23" ry="20"/>
-      </g>
-      <ellipse cx="50" cy="44" rx="21.5" ry="18.5" fill="#120a1c"/>
-      <g class="eyes"><ellipse class="eye" cx="41" cy="42" rx="5" ry="6"/><ellipse class="eye" cx="59" cy="42" rx="5" ry="6"/></g>
-      <g fill="#120a1c"><ellipse cx="41" cy="42" rx="1.4" ry="5"/><ellipse cx="59" cy="42" rx="1.4" ry="5"/></g>
-      <path d="M47 51h6l-3 3.5z" fill="#ff8bc7"/>
-      <path d="M36 52L18 48M36 55L18 58M64 52L82 48M64 55L82 58" stroke="#d9c6f5" stroke-width="1" stroke-linecap="round"/>
-    </svg>
-    <svg class="deco pump" viewBox="0 0 100 90" aria-hidden="true">
-      <ellipse class="glow" cx="50" cy="52" rx="44" ry="34" fill="#ff8a1f" opacity="0.28"/>
-      <path d="M46 20C46 10 52 6 58 4" stroke="#3aa655" stroke-width="7" stroke-linecap="round" fill="none"/>
-      <ellipse cx="30" cy="54" rx="22" ry="30" fill="#e8700f"/><ellipse cx="70" cy="54" rx="22" ry="30" fill="#e8700f"/><ellipse cx="50" cy="54" rx="24" ry="32" fill="#ff8a1f"/>
-      <path d="M32 44l8 12-14-2zM68 44l-8 12 14-2zM36 68l7-6 7 6 7-6 7 6-5 7H41z" fill="#3b1470"/>
-    </svg>
-    <svg class="gift" viewBox="0 0 100 100" aria-hidden="true">
-      <rect x="14" y="44" width="72" height="46" rx="8" fill="#8b5cf6"/>
-      <rect x="44" y="44" width="12" height="46" fill="#ffe14a"/>
-      <g class="lid"><rect x="8" y="30" width="84" height="18" rx="7" fill="#a47bff"/><rect x="44" y="30" width="12" height="18" fill="#ffd21f"/>
-      <path d="M50 30C38 10 22 14 30 26 34 31 46 30 50 30zM50 30C62 10 78 14 70 26 66 31 54 30 50 30z" fill="#ff8a1f"/></g>
-      <path d="M26 56h6M68 66h6M30 78h6" stroke="rgba(255,255,255,0.5)" stroke-width="3" stroke-linecap="round"/>
-    </svg>
-    <h2 id="codesTitle">Exclusive BlueStacks GiftCodes</h2>
-    <p>Unlock secret treats and bonus goodies, only for our Discord community.</p>
-    <a class="codebtn" href="https://discord.com/channels/507396585878192128/1308017930679619584" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1l2.6 6.4L21 8l-5 4.4L17.5 19 12 15.5 6.5 19 8 12.4 3 8l6.4-.6z"/></svg>
-      Code Room
-    </a>
+  <section class="primerow" id="codes" aria-label="GiftCodes, BlueStacks Prime and nowRewards">
+    <div class="candies">
+      <article class="candy gift" aria-label="Exclusive BlueStacks GiftCodes.">
+        <svg class="tw" aria-hidden="true" viewBox="0 0 24 24" style="left:22%;top:24%;--d:-0.0s"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg><svg class="tw" aria-hidden="true" viewBox="0 0 24 24" style="left:78%;top:60%;--d:-0.8s"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg><svg class="tw" aria-hidden="true" viewBox="0 0 24 24" style="left:60%;top:16%;--d:-1.5s"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+        <svg class="candy-svg" viewBox="0 0 240 140" role="img" aria-label="Black cat guarding a gift box">
+          <circle cx="120" cy="70" r="56" fill="#ffb02e" opacity="0.22"/>
+          <circle cx="40" cy="30" r="14" fill="#ffe14a"/><circle cx="35" cy="26" r="3" fill="#ffd21f"/>
+          <g><rect x="34" y="74" width="84" height="54" rx="8" fill="#8b5cf6" stroke="#4c2a9e" stroke-width="3"/><rect x="68" y="74" width="16" height="54" fill="#ffd21f"/><rect x="28" y="58" width="96" height="20" rx="7" fill="#a47bff" stroke="#4c2a9e" stroke-width="3"/><rect x="68" y="58" width="16" height="20" fill="#ffd21f"/><path d="M76 58C62 32 40 38 52 52 58 58 72 58 76 58zM76 58C90 32 112 38 100 52 94 58 80 58 76 58z" fill="#ff8a1f" stroke="#b5510a" stroke-width="2.5"/></g>
+          <svg x="132" y="22" width="84" height="100" viewBox="0 0 100 120"><path d="M74 108C98 108 100 76 88 66" fill="none" stroke="#b18cff" stroke-width="12" stroke-linecap="round" opacity="0.7"/><path d="M74 108C98 108 100 76 88 66" fill="none" stroke="#120a1c" stroke-width="9" stroke-linecap="round"/><g fill="#120a1c" stroke="#b18cff" stroke-width="1.6" stroke-linejoin="round"><path d="M24 112C14 88 22 62 50 60 78 62 86 88 76 112Z"/><path d="M32 44L30 14 46 28ZM68 44L70 14 54 28Z"/><ellipse cx="50" cy="44" rx="23" ry="20"/></g><ellipse cx="50" cy="44" rx="21.5" ry="18.5" fill="#120a1c"/><ellipse cx="41" cy="42" rx="5" ry="6" fill="#ffe14a"/><ellipse cx="59" cy="42" rx="5" ry="6" fill="#ffe14a"/><g fill="#120a1c"><ellipse cx="41" cy="42" rx="1.4" ry="5"/><ellipse cx="59" cy="42" rx="1.4" ry="5"/></g><path d="M47 51h6l-3 3.5z" fill="#ff8bc7"/><path d="M36 52L18 48M36 55L18 58M64 52L82 48M64 55L82 58" stroke="#d9c6f5" stroke-width="1" stroke-linecap="round"/></svg><g transform="translate(24 40) scale(1.4)"><path d="M0-6l1.8 4.2L6 0 1.8 1.8 0 6-1.8 1.8-6 0l4.2-1.8z" fill="#fff6b0"/></g><g transform="translate(210 70) scale(1)"><path d="M0-6l1.8 4.2L6 0 1.8 1.8 0 6-1.8 1.8-6 0l4.2-1.8z" fill="#fff6b0"/></g><g transform="translate(126 24) scale(1.1)"><path d="M0-6l1.8 4.2L6 0 1.8 1.8 0 6-1.8 1.8-6 0l4.2-1.8z" fill="#fff6b0"/></g>
+        </svg>
+        <h3>Exclusive BlueStacks GiftCodes</h3>
+        <p>Unlock secret treats and bonus goodies, only for our Discord community.</p>
+        <a class="codebtn2" href="https://discord.com/channels/507396585878192128/1308017930679619584" target="_blank" rel="noopener noreferrer">Code Room</a>
+      </article>
+      <article class="candy prime" aria-label="BlueStacks Prime.">
+        <svg class="tw" aria-hidden="true" viewBox="0 0 24 24" style="left:22%;top:24%;--d:-0.0s"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg><svg class="tw" aria-hidden="true" viewBox="0 0 24 24" style="left:78%;top:60%;--d:-0.8s"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg><svg class="tw" aria-hidden="true" viewBox="0 0 24 24" style="left:60%;top:16%;--d:-1.5s"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+        <svg class="candy-svg" viewBox="0 0 240 140" role="img" aria-label="Witch hat with a star buckle">
+          <circle cx="120" cy="70" r="56" fill="#38bdf8" opacity="0.2"/>
+          <circle cx="190" cy="34" r="16" fill="#ffe14a"/>
+          <path d="M150 52l8-6-3 9zM44 40l6 4-6 4z" fill="#b18cff" opacity="0"/>
+          <path d="M120 8C112 40 98 70 84 100H166C148 70 128 40 120 8z" fill="#3b1470" stroke="#b18cff" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M120 8C132 14 140 26 132 34" fill="none" stroke="#3b1470" stroke-width="10" stroke-linecap="round"/>
+          <path d="M100 76h40l4 22H96z" fill="#ff8a1f"/><rect x="113" y="78" width="14" height="18" rx="2" fill="none" stroke="#ffd21f" stroke-width="4"/>
+          <ellipse cx="120" cy="104" rx="74" ry="16" fill="#2a0f50" stroke="#b18cff" stroke-width="3"/>
+          <ellipse cx="120" cy="100" rx="52" ry="9" fill="#4a1f8c"/>
+          <path d="M56 118c16 8 112 8 128 0" stroke="#ffd21f" stroke-width="0" fill="none"/>
+          <g transform="translate(180 98)"><path d="M0 0L58 12" stroke="#8a5a2b" stroke-width="5" stroke-linecap="round"/><path d="M50 4c14-4 20 4 20 10-6 6-14 8-22 4z" fill="#d9a441"/></g>
+          <g transform="translate(52 34) scale(1.5)"><path d="M0-6l1.8 4.2L6 0 1.8 1.8 0 6-1.8 1.8-6 0l4.2-1.8z" fill="#fff6b0"/></g><g transform="translate(206 76) scale(1)"><path d="M0-6l1.8 4.2L6 0 1.8 1.8 0 6-1.8 1.8-6 0l4.2-1.8z" fill="#fff6b0"/></g><g transform="translate(86 22) scale(1)"><path d="M0-6l1.8 4.2L6 0 1.8 1.8 0 6-1.8 1.8-6 0l4.2-1.8z" fill="#fff6b0"/></g>
+                  </svg>
+        <h3>BlueStacks Prime</h3>
+        <p>TRICK OR TREAT? HOW ABOUT 50% OFF PRIME!</p>
+        <a class="codebtn2" href="https://now.gg/myaccount/nowbux?tab=prime" target="_blank" rel="noopener noreferrer">Claim</a>
+      </article>
+      <article class="candy rew" aria-label="nowRewards.">
+        <svg class="tw" aria-hidden="true" viewBox="0 0 24 24" style="left:22%;top:24%;--d:-0.0s"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg><svg class="tw" aria-hidden="true" viewBox="0 0 24 24" style="left:78%;top:60%;--d:-0.8s"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg><svg class="tw" aria-hidden="true" viewBox="0 0 24 24" style="left:60%;top:16%;--d:-1.5s"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+        <svg class="candy-svg" viewBox="0 0 240 140" role="img" aria-label="Bubbling cauldron full of gold coins">
+          <circle cx="120" cy="76" r="56" fill="#ff4fa0" opacity="0.2"/>
+          <g fill="#ffd21f" stroke="#c4690a" stroke-width="2.5"><circle cx="92" cy="30" r="10"/><circle cx="130" cy="14" r="10"/><circle cx="160" cy="38" r="10"/></g>
+          <g fill="#c4690a" font-family="Fredoka,sans-serif" font-weight="800" font-size="11" text-anchor="middle"><text x="92" y="34">B</text><text x="130" y="18">B</text><text x="160" y="42">B</text></g>
+          <path d="M60 128l-8 10M180 128l8 10" stroke="#120a1c" stroke-width="7" stroke-linecap="round"/>
+          <path d="M44 70C34 118 70 134 120 134S206 118 196 70Z" fill="#120a1c" stroke="#b18cff" stroke-width="3" stroke-linejoin="round"/>
+          <ellipse cx="120" cy="70" rx="80" ry="15" fill="#120a1c" stroke="#b18cff" stroke-width="3"/>
+          <ellipse cx="120" cy="70" rx="70" ry="10" fill="#7dff6a"/><ellipse cx="108" cy="68" rx="30" ry="4" fill="#c8ffb8" opacity="0.7"/>
+          <g fill="#c8ffb8" stroke="#3aa655" stroke-width="1.5"><circle cx="86" cy="60" r="6"/><circle cx="150" cy="58" r="8"/><circle cx="170" cy="52" r="4"/></g>
+          <path d="M74 96q46 14 92 0" stroke="#b18cff" stroke-width="2" fill="none" opacity="0.5"/>
+          <path d="M104 100c6-8 16-8 20 0-4-2-8 8-12 8s-8-6-8-8z" fill="#b18cff" opacity="0"/>
+          <g transform="translate(104 104)"><ellipse cx="16" cy="6" rx="14" ry="12" fill="#ff8a1f"/><path d="M8 2l6 6zM24 2l-6 6z" stroke="#3b1470" stroke-width="3"/><path d="M10 12l3-3 3 3 3-3 3 3 3-3" stroke="#3b1470" stroke-width="2.5" fill="none"/></g>
+          <g transform="translate(46 40) scale(1.4)"><path d="M0-6l1.8 4.2L6 0 1.8 1.8 0 6-1.8 1.8-6 0l4.2-1.8z" fill="#fff6b0"/></g><g transform="translate(206 34) scale(1.2)"><path d="M0-6l1.8 4.2L6 0 1.8 1.8 0 6-1.8 1.8-6 0l4.2-1.8z" fill="#fff6b0"/></g><g transform="translate(24 84) scale(1)"><path d="M0-6l1.8 4.2L6 0 1.8 1.8 0 6-1.8 1.8-6 0l4.2-1.8z" fill="#fff6b0"/></g>
+        </svg>
+        <h3>nowRewards</h3>
+        <p>Earn nowBux just for playing and spend them on treats.</p>
+        <a class="codebtn2" href="https://www.bluestacks.com/products/nowrewards.html" target="_blank" rel="noopener noreferrer">Check Out</a>
+      </article>
+    </div>
   </section>
 
-  <section class="banner" aria-label="Keep voting">
+  <section class="banner poster" aria-label="Halloween cashback offer">
+    <svg class="pdeco bt1" viewBox="0 0 100 55" aria-hidden="true"><use href="#bat"/></svg><svg class="pdeco bt2" viewBox="0 0 100 55" aria-hidden="true" style="transform:scaleX(-1)"><use href="#bat"/></svg><svg class="pdeco st a" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg><svg class="pdeco st b" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
     <div>
-      <h2>Every vote counts this spooky season</h2>
-      <p>Four categories, up to 5 picks in each. Check your ballot, then hit Submit to add your votes to the tally.</p>
-      <a class="go" href="#ballot">
-        Review my ballot
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <p class="pk">More IAPs, more rewards! Up to</p>
+      <h2 class="big" aria-label="20% cashback"><span>20% Cashback</span></h2>
+      <p class="sub">on BlueStacks exclusive games this Halloween!</p>
+      <div class="bacts">
       <a class="offer on-dark" href="https://www.bluestacks.com/apps.html" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v4H3z"/><path d="M5 13v8h14v-8"/><path d="M12 9v12"/><path d="M12 9c-2.5 0-5-1-5-3a2 2 0 0 1 3-1.6C11.500 5.200 12 9 12 9zM12 9c2.500 0 5-1 5-3a2 2 0 0 0-3-1.600C12.500 5.200 12 9 12 9z"/></svg><span>Check Halloween offer</span></a>
+        <a class="vlink" href="#ballot">Review my ballot →</a>
+      </div>
     </div>
     <div class="scene" aria-hidden="true">
       <img class="witch" id="bannerWitch" alt="">
