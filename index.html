@@ -682,6 +682,10 @@ footer { margin-top: 28px; text-align: center; color: var(--ink-soft); font-size
 .treatnote a.dlink { color: inherit; font-weight: 800; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .treatnote a.dlink:hover { color: var(--accent); }
 .treatnote a.dlink:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; border-radius: 4px; }
+#thanks .dl16 { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(180deg, #ffe14a, #ffa31f); color: #3a1500; border: 3px solid #fff3b0; box-shadow: 0 6px 0 #c4690a, 0 0 22px rgba(255, 193, 60, 0.55); text-decoration: none; }
+#thanks .dl16:hover { transform: translateY(-2px); box-shadow: 0 8px 0 #c4690a, 0 0 28px rgba(255, 193, 60, 0.75); }
+#thanks .dl16 .newtag { position: absolute; top: -12px; right: 14px; padding: 2px 9px; border-radius: 999px; background: #ef2d56; color: #fff; font-style: normal; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 0.08em; box-shadow: 0 2px 0 #8a0f2d; }
+@media (prefers-reduced-motion: no-preference) { #thanks .dl16 { animation: dlglow 2s ease-in-out infinite; } @keyframes dlglow { 0%, 100% { box-shadow: 0 6px 0 #c4690a, 0 0 14px rgba(255, 193, 60, 0.35); } 50% { box-shadow: 0 6px 0 #c4690a, 0 0 30px rgba(255, 193, 60, 0.85); } } }
 .candies, .cats4, .treatnote { max-width: none; }
 @media (min-width: 701px) {
   .treats { margin-top: 44px; }
@@ -1120,6 +1124,7 @@ footer { margin-top: 28px; text-align: center; color: var(--ink-soft); font-size
       <h2 id="tTitle">Thanks for submitting!</h2>
       <p class="mlead" id="tLead">Your votes are in. Happy haunting!</p>
       <div class="mrow tcol">
+        <a class="submit dl16" id="tDl" href="https://www.bluestacks.com/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span>Download BlueStacks 16 Beta</span><em class="newtag">NEW</em></a>
         <a class="submit" id="tOffer" href="https://www.bluestacks.com/products/store.html" target="_blank" rel="noopener noreferrer"><span>Check Halloween offer</span></a>
         <button type="button" class="ghost" id="tClose">Close</button>
       </div>
